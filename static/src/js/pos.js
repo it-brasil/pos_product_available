@@ -227,7 +227,8 @@ odoo.define("pos_product_available.PosModel", function(require) {
         },
         */
         rounded_qty: function() {
-            return Math.round(this.qty_available);
+            /*return Math.round((this.qty_available)*100);*/
+            return parseFloat(this.qty_available).toFixed(2);
         },
     });
 });
